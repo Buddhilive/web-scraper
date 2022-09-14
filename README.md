@@ -1,6 +1,6 @@
 # web-scraper
 A web scraper tool in Python
 
-```py
+```shell
 python scrapper.py
 ```

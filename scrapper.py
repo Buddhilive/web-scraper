@@ -15,5 +15,6 @@ content = doc.find("div", {"id": "mw-content-text"})
 
 # print(content.encode("utf-8"))
 
-with open('dist/content.txt', mode="w", encoding="utf-8") as f:
-    f.write(content.text)
+def createFile():
+    with open('dist/content.txt', mode="w", encoding="utf-8") as f:
+        f.write(content.text)
