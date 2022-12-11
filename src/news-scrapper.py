@@ -3,18 +3,19 @@ import requests
 import os
 
 url_collection = [
-    'https://www.bbc.com/sinhala/topics/c83plvepnq1t?page='
+    'https://www.bbc.com/sinhala/topics/c83plvepnq1t?page=',
+    'https://www.bbc.com/sinhala/topics/cg7267dz901t?page='
 ]
 
 folder_collection = [
     'world'
 ]
 
-ref_id = 0
+ref_id = 1
 
 baseurl = url_collection[ref_id]
 page_count = 40
-folder_name = folder_collection[ref_id]
+folder_name = folder_collection[0]
 
 count = 1
 missed_urls = list()
@@ -63,7 +64,7 @@ def extractText(url):
         missed_urls.append(url)
         with open('dist/log.txt', mode="w", encoding="utf-8") as f:
             for line in missed_urls:
-                f.write(" ".join(line) + "\n")
+                f.write("".join(line) + "\n")
         print(f"An exception occurred in {url}")
 
 
